@@ -1,0 +1,181 @@
+@import '@csstools/normalize.css/normalize.css/opinionated.css';
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Variables
+$font: "Sour Gummy", "Cherry Bomb One", sans-serif;
+
+$background-color: #fad6ff;
+$light-color: #ceaaed;
+$text-color: #494182;
+$link-color: #7864c6;
+$dark-color: #373334;
+
+$tablet: 768px;
+$desktop: 1024px;
+
+
+// Box sizing of all elements
+* {
+  box-sizing: border-box;
+  white-space-collapse: collapse;
+}
+
+
+// Body styling
+body {
+  // Reset margin and padding
+  margin: 0;
+
+  // Background cover
+  background: url('/assets/cover.png');
+  background-position: center;
+
+  // Font and text color
+  font-family: $font;
+  font-weight: 400;
+  font-style: normal;
+  color: $text-color;
+
+  // Link styling
+  a {
+    color: $link-color;
+    border-bottom: 1px dotted $link-color;
+    text-decoration: none;
+
+    &:hover, &:active {
+      color: $text-color;
+      border-bottom-color: $text-color;
+    }
+  }
+}
+
+// Container styling
+.container {
+  width: calc(100vw - 32px);
+  margin: 0px auto;
+  padding: 16px 0px;
+
+  @media screen and (min-width: $tablet) {
+    width: 640px;
+    padding: 32px 0px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 768px;
+    padding: 32px 0px;
+  }
+}
+
+// Window styling
+.window {
+  padding: 12px 0px 0px;
+
+  border: 2px $text-color solid;
+  border-image-source: url('/assets/background.png');
+  border-image-slice: 14 38 8 12 fill;
+  border-image-width: 14px 38px 8px 12px;
+  border-image-outset: 0;
+  border-image-repeat: repeat;
+
+  box-shadow: 2px 2px 4px $text-color;
+}
+
+// Footer styling
+.footer {
+  margin-top: 16px;
+
+  font-size: small;
+  text-align: center;
+
+  p {
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 4px $text-color;
+  }
+}
+
+// Section styling
+.section {
+  padding: 12px;
+}
+
+
+// Content styling
+.content {
+  padding: 12px;
+
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  // Markup styling
+  .is-bold {
+    font-weight: 900;
+  }
+  .is-small {
+    font-size: small;
+  }
+  .is-centered {
+    text-align: center;
+  }
+
+  // Colors
+  &.is-darker {
+    background: $light-color;
+  }
+}
+
+
+// Button styling
+a.button {
+  padding: 2px 4px;
+
+  border: none;
+  color: $text-color;
+  font-weight: 700;
+
+  &:hover, &:active {
+    color: $dark-color;
+  }
+}
+
+// Buttons styling
+.buttons {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+// Badges styling
+.badges {
+  display: grid;
+  grid-auto-columns: 88px;
+  grid-auto-rows: 31px;
+  grid-template-columns: 88px 88px 88px;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    box-shadow: 2px 2px 4px $text-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 88px 88px 88px 88px 88px;
+  }
+
+  a {
+    height: 31px;
+    border-bottom: none;
+  }
+}
+
+// Separator styling
+.separator {
+  border-top: 2px solid $text-color;
+}

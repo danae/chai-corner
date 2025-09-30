@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta-tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" sizes="512x512">
+
+    <!-- Title -->
+    <title>{{ title }}</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!-- Scripts -->
+    <script defer src="/js/index.js"></script>
+  </head>
+  
+  <body>
+    <!-- Window -->
+    <div class="container">
+      <div class="window">
+        <!-- Header -->
+        <header class="section content is-darker">
+          {% include "header.html" %}
+        </header>
+
+        <!-- Separator -->
+        <div class="separator"></div>
+
+         <!-- Main content -->
+        <main>
+          {{ content | safe }}
+        </main>
+
+        <!-- Separator -->
+        <div class="separator"></div>
+        
+        <!-- Content footer-->
+        <section class="section content is-darker">
+          {% include "footer.html" %}
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        {% include "badges.html" %}
+      </footer>
+    </div>
+  </body>
+</html>
