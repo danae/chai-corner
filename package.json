@@ -11,6 +11,7 @@
   "dependencies": {
     "@11ty/eleventy": "~3.1.2",
     "@csstools/normalize.css": "~12.1.1",
+    "@twemoji/api": "^16.0.1",
     "esbuild": "~0.25.9",
     "jquery": "~3.7.1",
     "sass": "~1.80.6"

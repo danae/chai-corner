@@ -1,0 +1,17 @@
+@use 'colors';
+
+
+// Border mixin
+@mixin border($color: colors.$shade-4) {
+  border: 2px dotted $color;
+}
+
+// Box shadow mixin
+@mixin box-shadow($color: colors.$shade-4) {
+  box-shadow: 2px 2px 4px $color;
+}
+
+// Text shadow mixin
+@mixin text-shadow($color: colors.$shade-4) {
+  text-shadow: 2px 2px 4px $color;
+}

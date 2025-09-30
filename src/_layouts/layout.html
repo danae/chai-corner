@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Shortcut icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link rel="icon" type="image/png" href="/assets/images/logo.png" sizes="512x512">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/icon.png">
+    <link rel="icon" type="image/png" href="/assets/images/icon.png" sizes="72x72">
 
     <!-- Title -->
     <title>{{ title }}</title>
@@ -24,31 +24,23 @@
     <div class="container">
       <div class="window">
         <!-- Header -->
-        <header class="section content is-darker">
-          {% include "header.html" %}
-        </header>
+        <header class="section content has-background-light">{% include "header.html" %}</header>
+        <div class="separator"></div>
 
-        <!-- Separator -->
+        <!-- Navigation bar -->
+        <nav class="navbar section content is-sm has-background-shade-2">{% include "navbar.html" %}</nav>
         <div class="separator"></div>
 
          <!-- Main content -->
-        <main>
-          {{ content | safe }}
-        </main>
+        <main>{{ content | safe }}</main>
 
-        <!-- Separator -->
+        <!-- Footer-->
         <div class="separator"></div>
-        
-        <!-- Content footer-->
-        <section class="section content is-darker">
-          {% include "footer.html" %}
-        </section>
+        <section class="section content has-background-shade-2">{% include "footer.html" %}</section>
       </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        {% include "badges.html" %}
-      </footer>
+      <!-- Badges footer -->
+      <footer class="footer">{% include "badges.html" %}</footer>
     </div>
   </body>
 </html>

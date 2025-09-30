@@ -1,0 +1,72 @@
+@use 'colors';
+@use 'mixins';
+
+
+// Color styles
+@each $name, $color in colors.$colors {
+  .has-text-#{$name} {
+    color: $color;
+  }
+  .has-background-#{$name} {
+    background-color: $color;
+  }
+}
+
+// Mixin styles
+.has-border {
+  @include mixins.border;
+}
+.has-box-shadow {
+  @include mixins.box-shadow;
+}
+.has-text-shadow {
+  @include mixins.text-shadow;
+}
+
+// Text styles
+.is-bold {
+  font-weight: 900;
+}
+.is-italic {
+  font-style: italic;
+}
+.is-small {
+  font-size: small;
+}
+.is-left-aligned {
+  text-align: left;
+}
+.is-center-aligned {
+  text-align: center;
+}
+.is-right-aligned {
+  text-align: right;
+}
+
+// Flexbox style
+.flex {
+  display: flex;
+  gap: 8px;
+
+  // Specific styling
+  &.is-horizontal {
+    flex-direction: row;
+  }
+  &.is-vertical {
+    flex-direction: column;
+  }
+  &.is-gapless {
+    gap: 0px;
+  }
+
+  // Remove margin from elements
+  & > * {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  // Full-width elements
+  & > .is-extended {
+    flex-grow: 1;
+  }
+}

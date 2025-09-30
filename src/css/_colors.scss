@@ -1,0 +1,26 @@
+@use "sass:map";
+
+
+// Color variables
+$shade-1: #fad6ff;
+$shade-2: #ceaaed;
+$shade-3: #7864c6;
+$shade-4: #494182;
+$light: #ffffff;
+$dark: #373334;
+
+// Derived color variables
+$background: $shade-1;
+$text: $shade-4;
+$link: $shade-3;
+
+
+// Color styles
+$colors: (
+  "shade-1": $shade-1,
+  "shade-2": $shade-2,
+  "shade-3": $shade-3,
+  "shade-4": $shade-4,
+  "light": $light,
+  "dark": $dark
+);

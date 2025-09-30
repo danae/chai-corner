@@ -1,0 +1,83 @@
+@use 'colors';
+@use 'mixins';
+
+
+// Responsive widths
+$tablet: 768px;
+$desktop: 1024px;
+
+
+// Container styling
+.container {
+  width: calc(100vw - 32px);
+  margin: 0px auto;
+  padding: 16px 0px;
+
+  @media screen and (min-width: $tablet) {
+    width: 640px;
+    padding: 32px 0px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 768px;
+    padding: 32px 0px;
+  }
+}
+
+// Window styling
+.window {
+  padding: 12px 0px 0px;
+
+  border: 2px colors.$shade-4 solid;
+  border-image-source: url('/assets/background.png');
+  border-image-slice: 14 38 8 12 fill;
+  border-image-width: 14px 38px 8px 12px;
+  border-image-outset: 0;
+  border-image-repeat: repeat;
+
+  @include mixins.box-shadow;
+}
+
+// Navbar styling
+.navbar {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+
+  // Link styling
+  a {
+    padding: 2px 4px;
+
+    border: none;
+    color: colors.$text;
+    font-weight: 700;
+
+    &:hover, &:active {
+      color: colors.$dark;
+    }
+  }
+}
+
+// Footer styling
+.footer {
+  margin-top: 16px;
+
+  font-size: small;
+  text-align: center;
+
+  p {
+    font-weight: 900;
+    color: colors.$light;
+    text-shadow: 2px 2px 4px colors.$shade-4;
+  }
+}
+
+// Section styling
+.section {
+  padding: 12px;
+
+  // Small section styling
+  &.is-sm {
+    padding: 6px;
+  }
+}

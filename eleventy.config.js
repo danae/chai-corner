@@ -30,7 +30,7 @@ async function compileJS(inputContent, inputPath) {
 	let result = await esbuild.build({
 		target: 'es2020',
 		entryPoints: [inputPath],
-		minify: true,
+		minify: false,
 		bundle: true,
 		write: false,
 	});
