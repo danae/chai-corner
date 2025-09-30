@@ -2,7 +2,7 @@
 
 **This is the repository for Chai's cozy corner.**
 
-his site is made in JS using [Eleventy](https://11ty.dev/). After building, the static site can be served using a web server. The provided [Dockerfile](https://github.com/danae/chai-corner/blob/master/Dockerfile) builds an image that builds the static Eleventy site and serves it using nginx.
+This site is made in JS using [Eleventy](https://11ty.dev/). After building, the static site can be served using a web server. The provided [Dockerfile](https://github.com/danae/chai-corner/blob/master/Dockerfile) builds an image that builds the static Eleventy site and serves it using nginx.
 
 An image from this Dockerfile will be built and published to the GitHub Container Registry on every push or pull request using a [GitHub action](https://github.com/danae/chai-corner/blob/master/.github/workflows/docker-publish.yml).
 
